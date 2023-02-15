@@ -1,10 +1,17 @@
 const express = require("express");
+const cookieParser = require("cookie-parser")
 const { route } = require("./routes");
 const port = 8000;
 
 const app = express();
 
+const db = require("./config/mongoose");
+const { urlencoded } = require("express");
 
+app.use(cookieParser());
+app.use(express.urlencoded())
+
+app.use(express.static("./assets"));
 
 
 // use express router
