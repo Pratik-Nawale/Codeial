@@ -50,6 +50,6 @@ module.exports.create = function(req, res){
 }
 
 // sign in and create session for the user
-module.exports.createSession = function(res, req){
-    //  TODO  later
+module.exports.createSession = function(req, res){
+    return res.redirect("/");
 }
